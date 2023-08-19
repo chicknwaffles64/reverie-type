@@ -1,12 +1,154 @@
-.wrapper{
-    width: 770px;
-    padding: 35px;
-    background: #17a2b8;
-    border-radius: 10px;
+/*ELEMENTS*/
+:root{
+    --theme: rgb(0, 0, 0);
+    --theme-half: rgba(0, 0, 0, 0.6);
+    /*
+    --dark-mode: black;
+    --light-mode: antiquewhite;
+    */
+}
+body{
+    margin: 0;
+    background-color: var(--theme);
+    overflow-x: hidden;
 }
 
-.wrapper .keyboard-input{
-    z-index: -999;
+#main-pg{
+    border: 3px solid black;
+    position: absolute;
+    top: 30%;
+
+    width: 100%;
+    height: 50vh;
+    min-height: 420px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 85%;
+    /*
+    background-color: rgb(255, 206, 142);
+    */
+    
+    background: linear-gradient(to top, var(--theme-half), 10%, transparent 90%, var(--theme-half)), url(garden-of-words-anime.gif);
+    
+    /*
+    background-image: url(garden-of-words-anime.gif);
+    */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+.background-dim{
+    opacity: 64% !important;
+}
+
+#start-button{
+    width: 75%;
+    height: 40px;
+    opacity: 50%;
+}
+
+#panel{
+    position: absolute;
+    height: 100%;
+    width: 85%; /*90% OR calc(78% + 8vw)*/
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.7rem solid var(--theme);
+}
+
+.wrapper{
+    top: -20px;
+    position: relative;
+    
+    height: 3rem;
+    width: 92%;
+    display: flex;
+    align-items: last baseline;
+    overflow: hidden;
+}
+.wrapper.shadow{
+    box-shadow: 0 5px rgba(0,0,0,0.08);
+}
+
+.wrap-box{
+    height: 2.2rem;
+    width: 100%;
+    padding-left: 3%; /*3% OR calc(47% - 33rem)*/
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    transition: transform, backdrop-filter;
+    transition-duration: 0.7s, 4s;
+    
+}
+.wrap-box.init{
+    transform: translateY(1.8em);
+    
+}
+.wrap-box.filter{
+    backdrop-filter: blur(0.4rem);
+}
+
+.typespan{
+    white-space: pre;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 25px; /* 1.7vi 25px 1.6rem*/
+
+    color: aliceblue;
+    text-shadow: 0.1em 0.3em 6px rgba(236, 236, 236, 0.259), 0.07em 0.07em #000000ae;
+
+    transition-property: translate, background-color, opacity;
+    transition-duration: 1.2s;
+}
+/*TEXT TRANSITIONS*/
+
+.good{
+    background-color: #16ff8771;
+    opacity: 40%;
+    transition-duration: 1.5s;
+    transition-delay: 0.4s;
+    transition-timing-function: ease-out;
+}
+
+.bad{
+    translate: 0 -0.3em;
+    background-color: #ff00005a;
+    opacity: 60%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+.caret{
+    translate: 0 0.08em;
+    background-color: #ff95001d;
+    border-top: 3px solid #ffc800;
+    transition-property: background-color, translate;
+    transition-duration: 2s, 0.3s;
+}
+
+.opacity{
+    transition-property: opacity;
+    opacity: 0;
+    transition-duration: 3s;
+    transition-timing-function: ease;
+}
+
+#keyboard-input{
+    z-index: -99;
     opacity: 0;
     position: absolute;
 }

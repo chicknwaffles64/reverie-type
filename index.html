@@ -5,13 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <style> input {width: 100%;} </style>
 </head>
 <body>
-    <div class="wrapper">
-        <label id="typingText"></label>
-        <textarea class="keyboard-input" autofocus></textarea>
-        <script src="main.js"></script>
-    </div>
+    <textarea id="keyboard-input" autofocus></textarea>
+    
+    <main id="main-pg">
+    <div id="background" style="z-index: -1"></div>
+
+        <button id="start-button" style="z-index: 10;" onclick='clickStart()'>
+            <img src="start-button.png" style="width:10%;">
+        </button>
+
+        <div id="panel">
+            <div class="wrapper">
+                <div class="wrap-box init"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="wrap-box init"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="wrap-box init"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="wrap-box init"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="index.js"></script>
 </body>
 </html>
