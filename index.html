@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main-pg" style="z-index: -3">
+    <div id="background" style="z-index: -2"></div>
+
+        <div id="start-screen">
+            <button class="start-butt water" id="start-button">START</button>
+            <button class="start-butt water" id="mode">CHANGE MODE</button>
+            <button class="start-butt water" id="shh">shh dont press me</button>
+        </div>
+
+        <div id="end-screen" style="z-index: 9">
+            <div class="box" id="end-stats">
+                <label>wpm </label><label class="stats" id="wpm">0</label>
+                <br>
+                <label>acc </label><label class="stats" id="accu">0%</label>
+            </div>
+            <div class="box" id="end-screen-stats">
+                <label>time: </label><label class="stats" id="restime"></label>
+            </div>
+            <div class="box" id="end-screen-menu">
+                <button class="end-butt water" id="retry">RETRY</button>
+                <button class="end-butt water" id="change-mode">CHANGE MODE</button>
+                <button class="end-butt water" id="exit">EXIT</button>
+            </div>
+        </div>
+
+        <div id="panel">
+            <div class="wrapper">
+                <div class="wrap-box init"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="wrap-box init"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="wrap-box init"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="wrap-box init"></div>
+            </div>
+
+            <div class="manga" style="right:-0.7rem"></div>
+            <div class="manga" style="left:-0.7rem"></div>
+        </div>
+
+    </main>
+    <div id="footer">
+        <div id="dark-light-mode" class="footer-butt">DARK</div>
+        <div id="switch" class="footer-butt">SWITCH</div>
+        <div id="menu" class="footer-butt">MENU</div>
+    </div>
+    
+    <script type="module" src="index.js"></script>
+</body>
+</html>
