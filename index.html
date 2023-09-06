@@ -10,10 +10,40 @@
     <main id="main-pg" style="z-index: -3">
     <div id="background" style="z-index: -2"></div>
 
-        <div id="start-screen">
-            <button class="start-butt water" id="start-button">START</button>
-            <button class="start-butt water" id="mode">CHANGE MODE</button>
-            <button class="start-butt water" id="shh">shh dont press me</button>
+        <div id="start-screen" currentmode="null">
+            <button class="mode-button select"id="words">words</button>
+            <button class="mode-button"id="timed">timed</button>
+            <button class="mode-button"id="book">book</button>
+
+            <span style="flex-grow: 1;"></span>
+
+            <span id="modetype">words:</span>
+            <button class="mode-limit">25</button>
+            <button class="mode-limit select">50</button>
+            <button class="mode-limit">100</button>
+            <button class="mode-limit">200</button>
+            <span style="width: 20px;"></span>
+
+            <button id="start-button">START</button>
+        </div>
+
+        <div id="bookshelf"style="z-index: 9" created="f">
+            <div id="book-titles">
+                <div id="harry">
+                    Harry Potter and the Philosopher's Stone
+                    <br><author>dont tell J. K. Rowling</author>
+                </div>
+                <div id="teehee">
+                    teehee
+                    <br><author>J. K. Rowling</author>
+                </div>
+                
+            </div>
+            <div id="book-scroll">
+                <div id="book-descript"></div>
+            </div>
+
+            <button id="start-book" class="start-book" style="display: none;"></button>
         </div>
 
         <div id="end-screen" style="z-index: 9">
@@ -27,28 +57,27 @@
             </div>
             <div class="box" id="end-screen-menu">
                 <button class="end-butt water" id="retry">RETRY</button>
-                <button class="end-butt water" id="change-mode">CHANGE MODE</button>
                 <button class="end-butt water" id="exit">EXIT</button>
             </div>
         </div>
 
         <div id="panel">
+            <div id="clock" class="transparent"style="display:none;">
+                <span class="timer"id="minutes"> 1</span>
+                <span class="timer"id="seconds">45</span>
+            </div>
             <div class="wrapper">
                 <div class="wrap-box init"></div>
             </div>
-
             <div class="wrapper">
                 <div class="wrap-box init"></div>
             </div>
-
             <div class="wrapper">
                 <div class="wrap-box init"></div>
             </div>
-
             <div class="wrapper">
                 <div class="wrap-box init"></div>
             </div>
-
             <div class="manga" style="right:-0.7rem"></div>
             <div class="manga" style="left:-0.7rem"></div>
         </div>
@@ -57,7 +86,7 @@
     <div id="footer">
         <div id="dark-light-mode" class="footer-butt">DARK</div>
         <div id="switch" class="footer-butt">SWITCH</div>
-        <div id="menu" class="footer-butt">MENU</div>
+        <div id="menu" class="footer-butt">EXIT</div>
     </div>
     
     <script type="module" src="index.js"></script>
